@@ -9,7 +9,11 @@ module.exports = {
   collectCoverage: true,
 
   // Especifica os padrões de arquivos a serem incluídos na cobertura de código.
-  collectCoverageFrom: ['src/**/*.ts(x)?'],
+  collectCoverageFrom: [
+    'src/**/*.ts(x)?',
+    '!src/app/***',
+    '!src/lib/registry.tsx'
+  ],
 
   // Configuração para arquivos de configuração do ambiente de teste.
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
